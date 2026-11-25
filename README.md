@@ -1,2 +1,4 @@
-# TripDeck
-TripDeck apk 
+# Trip Deck Android V0.5 prototype
+Open this directory in Android Studio (JDK 17, SDK 35) and Build > Build APK(s), or push all files including .github to a GitHub repository and run the Build Android APK workflow. Download its artifact and extract app-debug.apk. Debug signing is automatic. Allow precise location and notifications. Tap GPS ON and start a trip. Motion starts automatically; zero while parked. Online place lookup is optional in Setup.
+
+Not compiled or device tested. Native foreground GPS queues points while the master trip is running; the dashboard processes queued points when active. Raw recovery CSV is appended separately and can be exported in Setup. It is not a complete transactional trip database: process death, notification stop, long background intervals and WebView suspension can affect dashboard timing, segment attribution and archive recovery. Raw recovery CSV does not contain trip IDs. Online geocoding is best effort and may omit municipality or district; offline maps and county crossing detection are not implemented. Use only while safely parked or with a passenger operating controls.
